@@ -1,0 +1,280 @@
+/* 3-Color Dark Neumorphism Palette */
+:root {
+    --bg-base: #1e222b;
+    --shadow-dark: #15181f;
+    --shadow-light: #272c37;
+    
+    --cyan-accent: #00f2fe;
+    --coral-accent: #ff758c;
+    
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* Core Neumorphic Surface & Shadow Styling */
+.neu-card {
+    background: var(--bg-base);
+    border-radius: 20px;
+    box-shadow:  9px 9px 18px var(--shadow-dark), 
+                -9px -9px 18px var(--shadow-light);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.neu-card:hover {
+    box-shadow:  12px 12px 24px var(--shadow-dark), 
+                -12px -12px 24px var(--shadow-light);
+}
+
+/* Neumorphic Navigation */
+.neu-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1100px;
+    padding: 1rem 2rem;
+    background: var(--bg-base);
+    border-radius: 50px;
+    box-shadow:  6px 6px 12px var(--shadow-dark), 
+                -6px -6px 12px var(--shadow-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.logo span { color: var(--cyan-accent); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--cyan-accent); }
+
+/* Interactive Neumorphic Buttons */
+.neu-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--bg-base);
+    color: var(--text-primary);
+    padding: 0.7rem 1.4rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow:  5px 5px 10px var(--shadow-dark), 
+                -5px -5px 10px var(--shadow-light);
+    transition: all 0.2s ease;
+}
+
+.neu-btn:hover {
+    color: var(--cyan-accent);
+}
+
+.neu-btn:active {
+    box-shadow: inset 4px 4px 8px var(--shadow-dark), 
+                inset -4px -4px 8px var(--shadow-light);
+}
+
+.accent-cyan { color: var(--cyan-accent); }
+
+/* Layout & Container */
+.container {
+    max-width: 1100px;
+    margin: 120px auto 40px auto;
+    padding: 0 1.5rem;
+}
+
+.hero-card { margin-bottom: 3rem; }
+
+.status-badge {
+    color: var(--cyan-accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+}
+
+.cyan-text { color: var(--cyan-accent); }
+.coral-text { color: var(--coral-accent); }
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.bio {
+    max-width: 800px;
+    margin-bottom: 1.8rem;
+    color: var(--text-primary);
+}
+
+.contact-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.location-pill {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+/* Grids & Sections */
+.section { margin-bottom: 3rem; }
+
+.section-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+}
+
+/* Skill Box Inset Pills */
+.skill-box { text-align: center; }
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.neu-pill {
+    background: var(--bg-base);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    box-shadow: inset 3px 3px 6px var(--shadow-dark), 
+                inset -3px -3px 6px var(--shadow-light);
+}
+
+/* Projects */
+.project-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    font-size: 0.85rem;
+    color: var(--coral-accent);
+}
+
+.project-desc {
+    color: var(--text-secondary);
+    margin-bottom: 1.2rem;
+}
+
+.mini-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+}
+
+.full-width { grid-column: 1 / -1; }
+
+/* Experience */
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.company {
+    color: var(--cyan-accent);
+    font-weight: 600;
+}
+
+.exp-date {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.exp-bullets {
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+.exp-bullets li { margin-bottom: 0.5rem; }
+
+/* Education & Certs */
+.margin-top { margin-top: 1.5rem; }
+.highlight-text { color: var(--coral-accent); font-size: 0.9rem; }
+
+.cert-box ul { list-style: none; }
+.cert-box li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
